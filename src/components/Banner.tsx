@@ -24,20 +24,18 @@ export default Banner;
 
 const StyledBanner = styled.div`
   height: 616px;
-  background-color: #2b2835;
+  background-color: ${({ theme }) => theme.colors.backgroundBlack};
   display: flex;
   justify-content: center;
 
-  @media (max-width: 1024px) {
+  @media ${({ theme }) => theme.responsive.desktop} {
     height: 500px;
   }
-
-  @media (max-width: 768px) {
+  @media ${({ theme }) => theme.responsive.tablet} {
     height: 300px;
     margin-bottom: 500px;
   }
-
-  @media (max-width: 500px) {
+  @media ${({ theme }) => theme.responsive.mobile} {
     height: 208px;
     margin-bottom: 350px;
   }
@@ -49,21 +47,18 @@ const Layout = styled.div`
   justify-content: flex-end;
   align-items: center;
 
-  @media (max-width: 1024px) {
+  @media ${({ theme }) => theme.responsive.desktop} {
     width: 1024px;
   }
-
-  @media (max-width: 768px) {
+  @media ${({ theme }) => theme.responsive.tablet} {
     height: 750px;
     width: 768px;
     flex-direction: column;
     justify-content: space-between;
   }
-
   @media (max-width: 500px) {
     height: 300px;
     width: 500px;
-    /* padding: 0px 30px; */
   }
 `;
 
@@ -72,17 +67,15 @@ const Img = styled.img`
   position: relative;
   top: 76px;
 
-  @media (max-width: 1024px) {
+  @media ${({ theme }) => theme.responsive.desktop} {
     height: 600px;
     top: 50px;
   }
-
-  @media (max-width: 768px) {
+  @media ${({ theme }) => theme.responsive.tablet} {
     height: 500px;
     top: 0px;
   }
-
-  @media (max-width: 500px) {
+  @media ${({ theme }) => theme.responsive.mobile} {
     height: 300px;
   }
 `;
@@ -92,10 +85,10 @@ const TextBox = styled.div`
   max-width: 508px;
   color: white;
 
-  @media (max-width: 768px) {
+  @media ${({ theme }) => theme.responsive.tablet} {
     color: black;
   }
-  @media (max-width: 500px) {
+  @media ${({ theme }) => theme.responsive.mobile} {
     padding: 0px 30px;
   }
 `;
@@ -119,14 +112,13 @@ const PriceWrapper = styled.div`
   font-weight: 200;
   margin-bottom: 10px;
 
-  @media (max-width: 1200px) {
+  @media ${({ theme }) => theme.responsive.desktop} {
     flex-direction: column;
   }
-
-  @media (max-width: 768px) {
+  @media ${({ theme }) => theme.responsive.tablet} {
     flex-direction: row;
   }
-  @media (max-width: 500px) {
+  @media ${({ theme }) => theme.responsive.mobile} {
     align-items: center;
   }
 `;
@@ -135,22 +127,22 @@ const PriceText = styled.h2`
   font-size: 40px;
   margin-right: 30px;
 
-  @media (max-width: 1200px) {
+  @media ${({ theme }) => theme.responsive.desktop} {
     margin-bottom: 10px;
   }
-  @media (max-width: 768px) {
+  @media ${({ theme }) => theme.responsive.tablet} {
     margin-bottom: 0px;
   }
-  @media (max-width: 500px) {
+  @media ${({ theme }) => theme.responsive.mobile} {
     font-size: 32px;
   }
 `;
 
 const WarningText = styled.span`
   font-size: 13px;
-  color: #ffc700;
+  color: ${({ theme }) => theme.colors.yellow};
 
-  @media (max-width: 768px) {
+  @media ${({ theme }) => theme.responsive.tablet} {
     color: black;
   }
 `;

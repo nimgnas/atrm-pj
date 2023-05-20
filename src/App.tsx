@@ -23,5 +23,5 @@ const Body = styled.div``;
 
 const Footer = styled.div`
   height: 344px;
-  background-color: #2b2835;
+  background-color: ${({ theme }) => theme.colors.backgroundBlack};
 `;

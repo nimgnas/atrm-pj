@@ -32,7 +32,7 @@ const StyledButton = styled.div<IButton>`
     if (colorType === "YELLOW") {
       return css`
         color: black;
-        background-color: #ffc700;
+        background-color: ${({ theme }) => theme.colors.yellow};
       `;
     }
 
