@@ -8,3 +8,5 @@ root.render(
     <App />
   </React.StrictMode>
 );
+
+// 1024, 768,  500
