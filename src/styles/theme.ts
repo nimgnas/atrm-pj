@@ -1,7 +1,7 @@
 import { DefaultTheme } from "styled-components";
 
 const size = {
-  desktop: "1024px",
+  desktop: "1250px",
   tablet: "950px",
   mobile: "500px",
 };

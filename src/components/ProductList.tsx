@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Product from "./Product";
+import ProductListFooter from "./ProductListFooter";
 
 function ProductList() {
   return (
@@ -10,6 +11,7 @@ function ProductList() {
       <Product />
       <Product />
       <Product />
+      <ProductListFooter />
     </StyledProductList>
   );
 }
@@ -23,7 +25,6 @@ const StyledProductList = styled.div`
   justify-content: center;
 
   grid-template-columns: repeat(auto-fill, minmax(350px, 393px));
-  grid-auto-rows: 560px;
   gap: 35px;
 
   @media ${({ theme }) => theme.responsive.desktop} {

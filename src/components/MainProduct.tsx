@@ -55,7 +55,7 @@ const StyledMainProduct = styled.div`
   @media ${({ theme }) => theme.responsive.desktop} {
   }
   @media ${({ theme }) => theme.responsive.tablet} {
-    height: 100%;
+    height: 600px;
     padding-left: 30px;
     flex-direction: column-reverse;
   }

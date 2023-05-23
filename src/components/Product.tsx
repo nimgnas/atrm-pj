@@ -73,6 +73,8 @@ const PriceWrapper = styled.div`
 `;
 
 const PriceText = styled.h2`
-  font-size: 1.56em;
+  font-size: 25px;
+  font-weight: 600;
+  color: #9d8220;
   margin-right: 30px;
 `;
