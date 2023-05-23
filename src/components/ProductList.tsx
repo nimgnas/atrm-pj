@@ -21,6 +21,7 @@ export default ProductList;
 const StyledProductList = styled.div`
   padding: 0 65px;
   margin-top: 100px;
+  margin-bottom: 70px;
   display: grid;
   justify-content: center;
 
@@ -37,3 +38,5 @@ const StyledProductList = styled.div`
     padding: 10px;
   }
 `;
+
+const DDD = styled.div``;

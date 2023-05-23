@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import Button from "./Button";
+import { Layout } from "../styles/common";
 
 function Banner() {
   return (
     <StyledBanner>
-      <Layout>
+      <BannerLayout>
         <ImgWrapper>
           <Img src="https://github.com/nimgnas/atrm-pj/assets/85691654/e6760ecc-4109-42bc-af3f-dcef12da48ba" />
         </ImgWrapper>
@@ -17,7 +18,7 @@ function Banner() {
           </PriceWrapper>
           <PromotionalOffer>$60 Apple Music gift card with purchase of select Beats products.*</PromotionalOffer>
         </TextBox>
-      </Layout>
+      </BannerLayout>
     </StyledBanner>
   );
 }
@@ -44,26 +45,20 @@ const StyledBanner = styled.div`
   }
 `;
 
-const Layout = styled.div`
-  width: 1440px;
+const BannerLayout = styled(Layout)`
   padding: 0px 65px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  @media ${({ theme }) => theme.responsive.desktop} {
-    width: 1024px;
-  }
   @media ${({ theme }) => theme.responsive.tablet} {
     height: 750px;
-    width: 768px;
     padding: 0 30px;
     flex-direction: column;
     justify-content: space-between;
   }
   @media ${({ theme }) => theme.responsive.mobile} {
     height: 550px;
-    width: 500px;
     padding: 0 10px;
   }
 `;

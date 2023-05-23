@@ -3,6 +3,8 @@ import GlobalStyle from "./styles/globalStyle";
 import Banner from "./components/Banner";
 import MainProduct from "./components/MainProduct";
 import ProductList from "./components/ProductList";
+import Footer from "./components/Footer";
+import { Layout } from "./styles/common";
 
 function App() {
   return (
@@ -16,7 +18,7 @@ function App() {
             <ProductList />
           </Layout>
         </Body>
-        {/* <Footer></Footer> */}
+        <Footer />
       </StyledApp>
     </>
   );
@@ -31,21 +33,16 @@ const Body = styled.div`
   justify-content: center;
 `;
 
-const Layout = styled.div`
-  width: 1440px;
+// const Layout = styled.div`
+//   width: 1440px;
 
-  @media ${({ theme }) => theme.responsive.desktop} {
-    width: 1024px;
-  }
-  @media ${({ theme }) => theme.responsive.tablet} {
-    width: 768px;
-  }
-  @media ${({ theme }) => theme.responsive.mobile} {
-    width: 500px;
-  }
-`;
-
-const Footer = styled.div`
-  height: 344px;
-  background-color: ${({ theme }) => theme.colors.backgroundBlack};
-`;
+//   @media ${({ theme }) => theme.responsive.desktop} {
+//     width: 1024px;
+//   }
+//   @media ${({ theme }) => theme.responsive.tablet} {
+//     width: 768px;
+//   }
+//   @media ${({ theme }) => theme.responsive.mobile} {
+//     width: 500px;
+//   }
+// `;
