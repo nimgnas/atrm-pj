@@ -2,6 +2,7 @@ import styled from "styled-components";
 import GlobalStyle from "./styles/globalStyle";
 import Banner from "./components/Banner";
 import MainProduct from "./components/MainProduct";
+import ProductList from "./components/ProductList";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Body>
           <Layout>
             <MainProduct />
+            <ProductList />
           </Layout>
         </Body>
         {/* <Footer></Footer> */}
@@ -31,8 +33,6 @@ const Body = styled.div`
 
 const Layout = styled.div`
   width: 1440px;
-  /* padding: 0px 65px; */
-  /* padding-left: 65px; */
 
   @media ${({ theme }) => theme.responsive.desktop} {
     width: 1024px;

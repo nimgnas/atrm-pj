@@ -60,7 +60,6 @@ const Layout = styled.div`
     padding: 0 30px;
     flex-direction: column;
     justify-content: space-between;
-    /* align-items: flex-start; */
   }
   @media ${({ theme }) => theme.responsive.mobile} {
     height: 550px;
