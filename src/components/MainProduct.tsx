@@ -93,8 +93,8 @@ const ColorContainer = styled.div``;
 const AvailableColors = styled.h3`
   margin-bottom: 0.25em;
   font-size: 2.5em;
-  font-weight: 400;
-  letter-spacing: 4px;
+  font-weight: 300;
+  letter-spacing: 2px;
 `;
 
 const FindYourColor = styled.span`
@@ -150,7 +150,7 @@ const PriceWrapper = styled.div`
 const PriceText = styled.h2`
   margin-right: 30px;
   font-size: 2.5em;
-  font-weight: 200;
+  font-weight: 300;
 `;
 
 const PromotionalOffer = styled.span`
