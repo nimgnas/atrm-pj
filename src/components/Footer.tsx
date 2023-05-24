@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import { Layout } from "../styles/common";
+import MediaQuery from "react-responsive";
 
 function Footer() {
   return (
     <StyledFooter>
       <FooterLayout>
         <Column>
-          <Title>//로고//</Title>
+          <Logo src={require("../assets/logo.png")} />
         </Column>
         <Column>
           <Title>Products</Title>
@@ -19,21 +20,25 @@ function Footer() {
         </Column>
         <Column>
           <Title>Support</Title>
-          <Item>SERVICE & WARRANTY</Item>
-          <Item>REGISTER YOUR BEATS</Item>
-          <Item>UPDATE YOUR BEATS</Item>
-          <Item>AUTHORIZED SERVICE PROVIDERS</Item>
-          <Item>CONTACT SUPPORT</Item>
-          <Item>INTERNATIONAL NUMBERS</Item>
+          <MediaQuery minWidth={958}>
+            <Item>SERVICE & WARRANTY</Item>
+            <Item>REGISTER YOUR BEATS</Item>
+            <Item>UPDATE YOUR BEATS</Item>
+            <Item>AUTHORIZED SERVICE PROVIDERS</Item>
+            <Item>CONTACT SUPPORT</Item>
+            <Item>INTERNATIONAL NUMBERS</Item>
+          </MediaQuery>
         </Column>
         <Column>
           <Title>Company</Title>
-          <Item>EARPHONES</Item>
-          <Item>SPEAKERS</Item>
-          <Item>ACCESSORIES</Item>
-          <Item>COLLABORATIONS</Item>
-          <Item>BEATSAUDIO</Item>
-          <Item>SPECIAL OFFERS</Item>
+          <MediaQuery minWidth={958}>
+            <Item>EARPHONES</Item>
+            <Item>SPEAKERS</Item>
+            <Item>ACCESSORIES</Item>
+            <Item>COLLABORATIONS</Item>
+            <Item>BEATSAUDIO</Item>
+            <Item>SPECIAL OFFERS</Item>
+          </MediaQuery>
         </Column>
         <Column>
           <Title>Follow Us</Title>
@@ -86,6 +91,8 @@ const Column = styled.ul`
   }
 
   @media ${({ theme }) => theme.responsive.tablet} {
+    padding: 30px 20px 0px 20px;
+
     &:not(:first-child):not(:last-child) {
       border-bottom: 1px solid;
     }
@@ -114,7 +121,7 @@ const Item = styled.li`
   }
 `;
 
-const MainIcon = styled.img``;
+const Logo = styled.img``;
 
 const SocialIcon = styled.img`
   height: 28px;
