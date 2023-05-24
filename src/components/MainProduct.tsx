@@ -5,13 +5,23 @@ interface RadioProps {
   color: "white" | "tomato" | "black";
 }
 
-function MainProduct() {
+interface IMainProduct {
+  name: string;
+  des: string;
+  price: string;
+  img: string;
+}
+
+function MainProduct({ mainProduct }: { mainProduct: IMainProduct }) {
+  const { name, des, price, img } = mainProduct;
+
   return (
     <StyledMainProduct>
       <TextBox>
-        <OverView>Portable Wireless Speaker</OverView>
+        <OverView>{des}</OverView>
         <ItemName>
-          Beats Pill<span>+</span>
+          {name}
+          <span>+</span>
         </ItemName>
         <ColorContainer>
           <AvailableColors>Avaliable Colors</AvailableColors>
@@ -32,12 +42,12 @@ function MainProduct() {
           </ColorRadioGroup>
         </ColorContainer>
         <PriceWrapper>
-          <PriceText>$299.95</PriceText>
+          <PriceText>{price}</PriceText>
           <Button colorType="BLACK" width="170px" text="BUY NOW" />
         </PriceWrapper>
         <PromotionalOffer>$60 Apple Music gift card with purchase of select Beats products.*</PromotionalOffer>
       </TextBox>
-      <Img src="https://github.com/nimgnas/atrm-pj/assets/85691654/1322681f-6e2d-4075-be4c-7feeb4dace8d" />
+      <Img src={img} />
     </StyledMainProduct>
   );
 }

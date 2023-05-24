@@ -1,0 +1,58 @@
+{
+  "bannerProduct": {
+    "name": "Beats Studio3 Wireless",
+    "des": "Experience your music like never before.",
+    "price": "$299.95",
+    "img": "https://github.com/nimgnas/atrm-pj/assets/85691654/e6760ecc-4109-42bc-af3f-dcef12da48ba"
+  },
+  "mainProduct": {
+    "name": "Beats Pill",
+    "des": "Portable Wireless Speaker",
+    "price": "$299.95",
+    "img": "https://github.com/nimgnas/atrm-pj/assets/85691654/1322681f-6e2d-4075-be4c-7feeb4dace8d"
+  },
+  "products": [
+    {
+      "name": "Beats",
+      "specification": ["Up to 8 hours of battery life", "With Fast Fuel, a 5-minute charge = 2 hours of playback"],
+      "price": "$299.95",
+      "img": "https://github.com/nimgnas/atrm-pj/assets/85691654/a551bbad-1dca-4e97-b583-44e49799239c",
+      "isLine": false
+    },
+    {
+      "name": "Beats",
+      "specification": ["Up to 8 hours of battery life", "With Fast Fuel, a 5-minute charge = 2 hours of playback"],
+      "price": "$199.95",
+      "img": "https://github.com/nimgnas/atrm-pj/assets/85691654/1a41dc2d-f0a0-481d-ae2e-81c7ee1ec8de",
+      "isLine": false
+    },
+    {
+      "name": "Beats",
+      "specification": ["Up to 8 hours of battery life", "With Fast Fuel, a 5-minute charge = 2 hours of playback"],
+      "price": "$199.95",
+      "img": "https://github.com/nimgnas/atrm-pj/assets/85691654/64d32ef6-b25f-4ff2-aedc-3863074f517f",
+      "isLine": false
+    },
+    {
+      "name": "Beats",
+      "specification": ["Up to 8 hours of battery life", "With Fast Fuel, a 5-minute charge = 2 hours of playback"],
+      "price": "$999.95",
+      "img": "https://github.com/nimgnas/atrm-pj/assets/85691654/d2c27475-fd6b-40cc-87fb-29ccf6a5c487",
+      "isLine": true
+    },
+    {
+      "name": "Beats",
+      "specification": ["Up to 8 hours of battery life", "With Fast Fuel, a 5-minute charge = 2 hours of playback"],
+      "price": "$99.95",
+      "img": "https://github.com/nimgnas/atrm-pj/assets/85691654/8737b114-a6c7-4e02-adf7-dd2ab9a7313b",
+      "isLine": false
+    },
+    {
+      "name": "Beats",
+      "specification": ["Up to 8 hours of battery life", "With Fast Fuel, a 5-minute charge = 2 hours of playback"],
+      "price": "$299.95",
+      "img": "https://github.com/nimgnas/atrm-pj/assets/85691654/c80c4eb8-dbaa-4f36-bc05-a1925d0725cc",
+      "isLine": true
+    }
+  ]
+}

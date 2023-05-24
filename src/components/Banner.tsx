@@ -2,18 +2,27 @@ import styled from "styled-components";
 import Button from "./Button";
 import { Layout } from "../styles/common";
 
-function Banner() {
+interface IBanner {
+  name: string;
+  des: string;
+  price: string;
+  img: string;
+}
+
+function Banner({ bannerProduct }: { bannerProduct: IBanner }) {
+  const { name, des, price, img } = bannerProduct;
+
   return (
     <StyledBanner>
       <BannerLayout>
         <ImgWrapper>
-          <Img src="https://github.com/nimgnas/atrm-pj/assets/85691654/e6760ecc-4109-42bc-af3f-dcef12da48ba" />
+          <Img src={img} />
         </ImgWrapper>
         <TextBox>
-          <ItemName>Beats Studio3 Wireless</ItemName>
-          <OverView>Experience your music like never before.</OverView>
+          <ItemName>{name}</ItemName>
+          <OverView>{des}</OverView>
           <PriceWrapper>
-            <PriceText>$299.95</PriceText>
+            <PriceText>{price}</PriceText>
             <Button colorType="YELLOW" width="170px" text="BUY NOW" />
           </PriceWrapper>
           <PromotionalOffer>$60 Apple Music gift card with purchase of select Beats products.*</PromotionalOffer>

@@ -2,15 +2,20 @@ import styled from "styled-components";
 import Product from "./Product";
 import ProductListFooter from "./ProductListFooter";
 
-function ProductList() {
+interface IProductList {
+  name: string;
+  specification: string[];
+  price: string;
+  img: string;
+  isLine: boolean;
+}
+
+function ProductList({ productList }: { productList: IProductList[] }) {
   return (
     <StyledProductList>
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
+      {productList.map((product) => (
+        <Product product={product} />
+      ))}
       <ProductListFooter />
     </StyledProductList>
   );

@@ -4,20 +4,24 @@ import Banner from "./components/Banner";
 import MainProduct from "./components/MainProduct";
 import ProductList from "./components/ProductList";
 import Footer from "./components/Footer";
-import { Layout } from "./styles/common";
 import Navigation from "./components/Navigation";
+import { Layout } from "./styles/common";
+
+import products from "./json/products.json";
 
 function App() {
+  const { bannerProduct, mainProduct, products: productList } = products;
+
   return (
     <>
       <GlobalStyle />
       <StyledApp>
         <Navigation />
-        <Banner />
+        <Banner bannerProduct={bannerProduct} />
         <Body>
           <Layout>
-            <MainProduct />
-            <ProductList />
+            <MainProduct mainProduct={mainProduct} />
+            <ProductList productList={productList} />
           </Layout>
         </Body>
         <Footer />

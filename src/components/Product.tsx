@@ -1,20 +1,31 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Button from "./Button";
 
-function Product() {
+interface IProduct {
+  name: string;
+  specification: string[];
+  price: string;
+  img: string;
+  isLine: boolean;
+}
+
+function Product({ product }: { product: IProduct }) {
+  const { name, specification, price, img, isLine } = product;
+
   return (
     <StyledProduct>
       <ImgWrapper>
-        <Img src="https://github.com/nimgnas/atrm-pj/assets/85691654/8737b114-a6c7-4e02-adf7-dd2ab9a7313b" />
+        <Img src={img} isLine={isLine} />
       </ImgWrapper>
       <TextBox>
-        <ItemName>Beatsx</ItemName>
+        <ItemName>{name}</ItemName>
         <Specification>
-          <li>Up to 8 hours of battery life</li>
-          <li>With Fast Fuel, a 5-minute charge = 2 hours of playback</li>
+          {specification.map((spec) => (
+            <li>{spec}</li>
+          ))}
         </Specification>
         <PriceWrapper>
-          <PriceText>$999.95</PriceText>
+          <PriceText>{price}</PriceText>
           <Button colorType="BLACK" width="145px" text="BUY NOW" />
         </PriceWrapper>
       </TextBox>
@@ -37,16 +48,23 @@ const ImgWrapper = styled.div`
   position: relative;
 `;
 
-const Img = styled.img`
+const Img = styled.img<{ isLine: boolean }>`
   position: absolute;
   height: 100%;
   width: 100%;
   padding: 10px 20px 20px 20px;
   object-fit: contain;
 
-  /* if 줄이어폰 */
-  /* top: 150px;
-  left: 30px; */
+  ${({ isLine }) => {
+    if (isLine) {
+      return css`
+        height: 120%;
+        width: auto;
+        top: 100px;
+        left: 100px;
+      `;
+    }
+  }}
 `;
 
 const TextBox = styled.div`
