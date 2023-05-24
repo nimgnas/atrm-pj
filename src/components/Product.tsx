@@ -18,7 +18,10 @@ function Product({ product }: { product: IProduct }) {
         <Img src={img} isLine={isLine} />
       </ImgWrapper>
       <TextBox>
-        <ItemName>{name}</ItemName>
+        <ItemName>
+          {name}
+          <span>x</span>
+        </ItemName>
         <Specification>
           {specification.map((spec) => (
             <li>{spec}</li>
@@ -77,6 +80,13 @@ const ItemName = styled.h2`
   margin-bottom: 5px;
   font-size: 3.125em;
   font-weight: 500;
+
+  span {
+    font-size: 25px;
+    font-weight: 300;
+    position: relative;
+    bottom: 20px;
+  }
 `;
 
 const Specification = styled.ul`

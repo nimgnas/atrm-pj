@@ -96,6 +96,13 @@ const ItemName = styled.h2`
   margin-bottom: 0.5em;
   font-size: 3.125em;
   font-weight: bold;
+
+  span {
+    font-size: 2.5rem;
+    font-weight: 500;
+    position: relative;
+    bottom: 0.6em;
+  }
 `;
 
 const ColorContainer = styled.div``;
