@@ -23,7 +23,7 @@ const StyledProductList = styled.div`
   margin-top: 100px;
   margin-bottom: 70px;
   display: grid;
-  justify-content: space-between;
+  justify-content: center;
 
   grid-template-columns: repeat(auto-fill, minmax(350px, 393px));
   gap: 35px;
