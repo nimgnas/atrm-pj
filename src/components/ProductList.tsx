@@ -19,11 +19,11 @@ function ProductList() {
 export default ProductList;
 
 const StyledProductList = styled.div`
-  padding: 0 65px;
+  padding: 0 10px;
   margin-top: 100px;
   margin-bottom: 70px;
   display: grid;
-  justify-content: center;
+  justify-content: space-between;
 
   grid-template-columns: repeat(auto-fill, minmax(350px, 393px));
   gap: 35px;
@@ -38,5 +38,3 @@ const StyledProductList = styled.div`
     padding: 10px;
   }
 `;
-
-const DDD = styled.div``;
