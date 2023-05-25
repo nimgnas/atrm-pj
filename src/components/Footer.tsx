@@ -42,7 +42,7 @@ function Footer() {
         </Column>
         <Column>
           <Title>Follow Us</Title>
-          <SocialIcon src="https://github.com/nimgnas/atrm-pj/assets/85691654/45c7308a-af81-47ff-9451-9d4725a4694a" />
+          <SocialIcon src={require("../assets/icons/socialicons.png")} />
         </Column>
       </FooterLayout>
     </StyledFooter>

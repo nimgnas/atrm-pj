@@ -6,7 +6,7 @@ interface IUseProgressiveImg {
 }
 
 function useProgressiveImg({ placeholderSrc, originalSrc }: IUseProgressiveImg) {
-  const [imgSrc, setImgSrc] = useState(placeholderSrc || originalSrc);
+  const [imgSrc, setImgSrc] = useState(placeholderSrc);
 
   useEffect(() => {
     const img = new Image();
