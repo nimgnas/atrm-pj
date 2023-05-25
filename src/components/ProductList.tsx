@@ -6,6 +6,7 @@ interface IProductList {
   name: string;
   specification: string[];
   price: string;
+  placeHolderImg: string;
   img: string;
   isLine: boolean;
 }

@@ -1,22 +1,25 @@
 import styled from "styled-components";
 import Button from "./Button";
 import { Layout } from "../styles/common";
+import useProgressiveImg from "../hooks/useProgressiveImg";
 
 interface IBanner {
   name: string;
   des: string;
   price: string;
+  placeHolderImg: string;
   img: string;
 }
 
 function Banner({ bannerProduct }: { bannerProduct: IBanner }) {
-  const { name, des, price, img } = bannerProduct;
+  const { name, des, price, placeHolderImg, img } = bannerProduct;
+  const progressImg = useProgressiveImg({ placeholderSrc: placeHolderImg, originalSrc: img });
 
   return (
     <StyledBanner>
       <BannerLayout>
         <ImgWrapper>
-          <Img src={img} />
+          <Img src={progressImg} />
         </ImgWrapper>
         <TextBox>
           <ItemName>{name}</ItemName>

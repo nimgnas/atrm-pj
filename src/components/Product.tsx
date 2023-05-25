@@ -1,21 +1,24 @@
 import styled, { css } from "styled-components";
 import Button from "./Button";
+import useProgressiveImg from "../hooks/useProgressiveImg";
 
 interface IProduct {
   name: string;
   specification: string[];
   price: string;
+  placeHolderImg: string;
   img: string;
   isLine: boolean;
 }
 
 function Product({ product }: { product: IProduct }) {
-  const { name, specification, price, img, isLine } = product;
+  const { name, specification, price, placeHolderImg, img, isLine } = product;
+  const progressImg = useProgressiveImg({ placeholderSrc: placeHolderImg, originalSrc: img });
 
   return (
     <StyledProduct>
       <ImgWrapper>
-        <Img src={img} isLine={isLine} />
+        <Img src={progressImg} isLine={isLine} />
       </ImgWrapper>
       <TextBox>
         <ItemName>

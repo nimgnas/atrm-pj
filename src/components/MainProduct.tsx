@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Button from "./Button";
+import useProgressiveImg from "../hooks/useProgressiveImg";
 
 interface RadioProps {
   color: "white" | "tomato" | "black";
@@ -9,11 +10,13 @@ interface IMainProduct {
   name: string;
   des: string;
   price: string;
+  placeHolderImg: string;
   img: string;
 }
 
 function MainProduct({ mainProduct }: { mainProduct: IMainProduct }) {
-  const { name, des, price, img } = mainProduct;
+  const { name, des, price, placeHolderImg, img } = mainProduct;
+  const progressImg = useProgressiveImg({ placeholderSrc: placeHolderImg, originalSrc: img });
 
   return (
     <StyledMainProduct>
@@ -47,7 +50,7 @@ function MainProduct({ mainProduct }: { mainProduct: IMainProduct }) {
         </PriceWrapper>
         <PromotionalOffer>$60 Apple Music gift card with purchase of select Beats products.*</PromotionalOffer>
       </TextBox>
-      <Img src={img} />
+      <Img src={progressImg} />
     </StyledMainProduct>
   );
 }
