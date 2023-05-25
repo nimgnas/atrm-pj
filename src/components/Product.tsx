@@ -18,7 +18,7 @@ function Product({ product }: { product: IProduct }) {
   return (
     <StyledProduct>
       <ImgWrapper>
-        <Img src={img} isLine={isLine} />
+        <Img src={progressImg} isLine={isLine} />
       </ImgWrapper>
       <TextBox>
         <ItemName>
