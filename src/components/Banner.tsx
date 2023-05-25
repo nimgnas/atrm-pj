@@ -19,7 +19,7 @@ function Banner({ bannerProduct }: { bannerProduct: IBanner }) {
     <StyledBanner>
       <BannerLayout>
         <ImgWrapper>
-          <Img src={progressImg} />
+          <Img src={img} />
         </ImgWrapper>
         <TextBox>
           <ItemName>{name}</ItemName>

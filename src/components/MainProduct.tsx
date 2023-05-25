@@ -50,7 +50,7 @@ function MainProduct({ mainProduct }: { mainProduct: IMainProduct }) {
         </PriceWrapper>
         <PromotionalOffer>$60 Apple Music gift card with purchase of select Beats products.*</PromotionalOffer>
       </TextBox>
-      <Img src={progressImg} />
+      <Img src={img} />
     </StyledMainProduct>
   );
 }
