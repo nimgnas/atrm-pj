@@ -24,7 +24,7 @@ const StyledButton = styled.div<IButton>`
   justify-content: center;
   align-items: center;
 
-  border-radius: 30px;
+  border-radius: 31px;
   font-size: 14px;
   font-weight: 500;
 
